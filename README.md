@@ -1,5 +1,6 @@
 🌟 CRIS GALLERY - E-Commerce Website
-CRIS GALLERY is a vibrant, fully responsive e-commerce web application built for modern shoppers. It features real-time product search, interactive UI, cart functionality, and a colorful, disco-inspired design that makes shopping fun and engaging — especially for Gen Z users.
+
+## CRIS GALLERY is a vibrant, fully responsive e-commerce web application built for modern shoppers. It features real-time product search, interactive UI, cart functionality, and a colorful, disco-inspired design that makes shopping fun and engaging — especially for Gen Z users.
 
 🚀 Features
 ✅ Real-Time Product Search
