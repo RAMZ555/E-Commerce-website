@@ -2,7 +2,8 @@
 
 ##CRIS GALLERY is a vibrant, fully responsive e-commerce web application built for modern shoppers. It features real-time product search, interactive UI, cart functionality, and a colorful, disco-inspired design that makes shopping fun and engaging — especially for Gen Z users.
 
-🚀 Features
+## 🚀 Features
+
 ✅ Real-Time Product Search
 Users can search products instantly, and results filter live as they type.
 
@@ -21,7 +22,8 @@ Mobile menu opens and closes with smooth animation and minimal code.
 ✅ Stylish Disco Theme
 Add-to-cart buttons and hover effects are animated with a glowing neon disco gradient.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
+
 HTML5 — Semantic markup
 
 CSS3 — Custom animations, disco gradients, responsive layout
@@ -30,17 +32,15 @@ JavaScript (Vanilla) — DOM manipulation, filtering, cart logic
 
 Font Awesome — For clean and professional icons
 
-📌 Project Setup
+## 📌 Project Setup
 To run this project locally:
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/cris-gallery.git
 cd cris-gallery
 Then simply open index.html in your browser.
 
-🧑‍💻 What I Learned
+## 🧑‍💻 What I Learned
+
 Implemented responsive design with CSS media queries and Flex/Grid.
 
 Learned DOM manipulation and filtering with vanilla JavaScript.
@@ -49,7 +49,8 @@ Created cart features using localStorage and real-time interactions.
 
 Applied UI/UX design thinking: readable fonts, spacing, layout balance, and color themes.
 
-🔧 Future Improvements
+## 🔧 Future Improvements
+
  Add cart page to view/remove products
 
  Build backend using Node.js + Express for product storage and user login
@@ -60,10 +61,8 @@ Applied UI/UX design thinking: readable fonts, spacing, layout balance, and colo
 
  Store product data in JSON or backend API
 
-📂 File Structure
-bash
-Copy
-Edit
+## 📂 File Structure
+
 cris-gallery/
 │
 ├── index.html          # Homepage with landing content
@@ -74,6 +73,7 @@ cris-gallery/
 ├── collection.js       # JS for search functionality
 ├── cart.js             # JS for cart storage (localStorage)
 └── README.md           # Project overview & instructions
+
 📄 License
 This project is licensed under the MIT License.
 
