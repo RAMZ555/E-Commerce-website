@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - CRIS GALLERY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .contact-section {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      background: linear-gradient(to right, #1d232c, #2c2c54);
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #7a00ff;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff00c8;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      resize: none;
+    }
+
+    .contact-section button {
+      padding: 12px;
+      background: linear-gradient(45deg, #ff0057, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8);
+      background-size: 400%;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      animation: disco 4s linear infinite;
+    }
+
+    @keyframes disco {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .contact-section .success {
+      text-align: center;
+      color: lime;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1>CRIS GALLERY</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collections.html">Collections</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+    <div class="navbar-menu-toggle" onclick="shownavbar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <div class="side-navbar">
+    <p style="text-align: right;" onclick="closenavbar()"><i class="fa-solid fa-xmark"></i></p>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitContact(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+      <p class="success" id="successMsg"></p>
+    </form>
+  </div>
+
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-box-1">
+        <h2 class="heading-text">CRIS GALLERY</h2>
+        <p>Thank you for reaching out. We’ll get back to you soon!</p>
+        <div class="footer-icon">
+          <i class="fa-brands fa-instagram" style="color: white;"></i>
+          <i class="fa-brands fa-twitter" style="color: white;"></i>
+          <i class="fa-brands fa-facebook" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2024 CRIS GALLERY</p>
+  </div>
+
+  <script>
+    function shownavbar() {
+      document.querySelector(".side-navbar").classList.add("active");
+    }
+
+    function closenavbar() {
+      document.querySelector(".side-navbar").classList.remove("active");
+    }
+
+    function submitContact(event) {
+      event.preventDefault();
+      document.getElementById("successMsg").textContent = "✅ Message sent successfully!";
+      setTimeout(() => {
+        document.getElementById("successMsg").textContent = "";
+        event.target.reset();
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>

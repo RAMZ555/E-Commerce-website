@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - CRIS GALLERY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fefefe;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #8e2de2;
+    }
+    .cart-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .empty-cart {
+      text-align: center;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+  </div>
+
+  <script>
+    const cartContainer = document.getElementById("cart-items");
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = "<p class='empty-cart'>Your cart is empty.</p>";
+    } else {
+      cartItems.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `<span>${item.name}</span><span>Qty: ${item.quantity}</span>`;
+        cartContainer.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
